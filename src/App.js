@@ -9,6 +9,7 @@ function App() {
       <Accordion/>
       <hr></hr>
       <h1>Challenge 1 of 2: Synced inputs</h1>
+      <SyncedInputs />
     </div>
   );
 }
