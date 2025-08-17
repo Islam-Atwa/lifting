@@ -9,7 +9,7 @@ export default function SyncedInputs() {
   );
 }
 
-function Input({ label }) {
+function Input({ label, value, onChange}) {
   
 
   function handleChange(e) {
