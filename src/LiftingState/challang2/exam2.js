@@ -3,28 +3,32 @@ import { foods, filterItems } from './data.js';
 
 export default function FilterableList() {
     const [query, setQuery] = useState('');
+    const result = filterItems(foods, query);
+
+
+    function handleChange(e) {
+        setQuery(e.target.value);
+    }
   return (
     <>
-      <SearchBar />
+      <SearchBar
+        query={query}
+        onChange={handleChange}
+       />
       <hr />
-      <List items={foods} />
+      <List items={result} />
     </>
   );
 }
 
 function SearchBar({query, onChange}) {
   
-
-  function handleChange(e) {
-    setQuery(e.target.value);
-  }
-
   return (
     <label>
       Search:{' '}
       <input
         value={query}
-        onChange={handleChange}
+        onChange={onChange}
       />
     </label>
   );
