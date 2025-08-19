@@ -12,7 +12,7 @@ export default function FilterableList() {
   );
 }
 
-function SearchBar() {
+function SearchBar({query, onChange}) {
   
 
   function handleChange(e) {
